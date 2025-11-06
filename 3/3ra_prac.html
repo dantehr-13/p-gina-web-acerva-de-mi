@@ -1,17 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3RA PRÁCTICA</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>actividad 3</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <h1>IMPLEMENTACIÓN DE BOTONES PARA JAVASCRIPT</h1>
-    <button>PRIMER BOTÓN</button>
-    <button>SEGUNDO BOTÓN</button>
-    <button>TERCER BOTÓN</button>
-    <button>CUARTO BOTÓN</button>
+  <header>
+    <h1>KIRBY — PowerUps</h1>
+  </header>
+
+  <main class="stage">
+    <!--..........................................................................................-->
+    <img id="personaje" src="../3/elementos/personaje-default.png" alt="Personaje principal"/>
+
+     <!--..........................................................................................-->
+    <nav class="powerbar" aria-label="Selecciona un power-up">
+      <!-- Cada botón es una imagen -->
+      <button class="power" 
+              data-img="../3/elementos/personaje-fuego.jpg" 
+              data-bg="3/elementos/fuego.png" 
+              aria-label="Cambio de personaje: fuego">
+        <img src="../3/elementos/personaje-fuego.jpg" alt="Power-up Fuego">
+      </button>
+ <!--..........................................................................................-->
+      <button class="power" 
+              data-img="../3/elementos/personaje-bufon.png" 
+              data-bg="3/elementos/bufon.png" 
+              aria-label="Cambio de personaje: bufon">
+        <img src="../3/elementos/personaje-bufon.png" alt="Power-up Flor de Bufon">
+      </button>
+ <!--..........................................................................................-->
+      <button class="power" 
+              data-img="../3/elementos/personaje-boomerang.png" 
+              data-bg="3/elementos/boomerang.png" 
+              aria-label="Cambio de personaje: boomerang">
+        <img src="../3/elementos/personaje-boomerang.png" alt="Power-up Estrella">
+      </button>
+ <!--..........................................................................................-->
+      <button class="power" 
+              data-img="../3/elementos/personaje-martillo.png" 
+              data-bg="3/elementos/martillo.png" 
+              aria-label="Cambio de personaje: martillo">
+        <img src="../3/elementos/personaje-martillo.png" alt="Power-up Pluma">
+      </button>
+    </nav>
+  </main>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

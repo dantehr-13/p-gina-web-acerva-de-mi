@@ -1,0 +1,86 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root{
+  --page-padding: 16px;
+  --power-size: 72px; 
+  --shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #fff;
+  background: #111 url("../3/elementos/bg-deafult.jpg") center/cover no-repeat fixed;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+header {
+  padding: var(--page-padding);
+  text-align: center;
+  text-wrap: balance;
+  text-shadow: 0 2px 10px rgba(0,0,0,.5);
+}
+
+.stage {
+  display: grid;
+  place-items: center;
+  gap: 20px;
+  padding: var(--page-padding);
+}
+
+#personaje {
+  width: min(90vw, 520px);
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(var(--shadow));
+  border-radius: 16px;
+  background: rgba(0,0,0,.2);
+}
+
+.powerbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;      
+  padding: 10px 12px;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,.25);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.power {
+  border: none;
+  background: #1a1a1a;
+  width: calc(var(--power-size) + 8px);
+  height: calc(var(--power-size) + 8px);
+  padding: 6px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.power img{
+  width: var(--power-size);
+  height: var(--power-size);
+  object-fit: contain;
+  display: block;
+}
+
+.power:hover { transform: translateY(-2px); }
+.power:active { transform: translateY(0); }
+
+.power[aria-pressed="true"] {
+  outline: 2px solid #fff;
+  background: #2a2a2a;
+  box-shadow: 0 0 0 4px rgba(255,255,255,.15);
+}
+
+.power:focus-visible {
+  outline: 3px solid #ffd166;
+}
